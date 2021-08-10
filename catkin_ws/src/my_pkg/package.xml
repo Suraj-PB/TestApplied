@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package format="2">
+    <name>my_pkg</name>
+    <version>0.1.0</version>
+    <description>test</description>
+
+    <!-- TODO: Replace with actual maintainer -->
+    <maintainer email="bnarasapur@gmail.com"> Basavaraj </maintainer>
+    <license> TODO </license>
+
+    <buildtool_depend>catkin</buildtool_depend>
+    <depend>diagnostic_msgs</depend>
+    <depend>nav_msgs</depend>
+    <depend>roscpp</depend>
+    <depend>rospy</depend>
+    <depend>sensor_msgs</depend>
+    <depend>std_msgs</depend>
+    <depend>visualization_msgs</depend>
+    <depend>rosgraph_msgs</depend>
+    <depend>geometry_msgs</depend>
+
+    
+</package>

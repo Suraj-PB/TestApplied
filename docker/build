@@ -1,0 +1,7 @@
+#!/bin/bash
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+IMAGE="ros-docker:$(date +'%b-%d-%y')-$(git describe --always)"
+docker build -f $DIR/Dockerfile -t $IMAGE "$DIR"/..
+docker tag $IMAGE ros-docker:latest

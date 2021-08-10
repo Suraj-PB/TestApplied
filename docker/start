@@ -1,0 +1,25 @@
+#!/bin/bash
+
+set -e
+
+PROJECT_ROOT="$(cd "$(dirname "$0")"; cd ..; pwd)"
+
+docker run -id \
+ --name ros-docker \
+ --volume ${PROJECT_ROOT}/catkin_ws:/catkin_ws \
+ --rm \
+ ros-docker "$@"
+
+# Share a device with the Docker container by adding:
+#   --device=/dev/ttyUSB0 \
+# below the line containing "--name"
+
+# #!/bin/bash
+# DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+# ROOT_DIR="$( cd "${DIR}/.." && pwd )"
+# echo "Starting docker image..."
+# docker run -id --rm --name ros-docker \
+#   -v $ROOT_DIR/:/ros-docker/catkin_ws \
+#   --net=host \
+#   ros-docker:latest
+# catkin_make
